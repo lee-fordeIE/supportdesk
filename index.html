@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SupportDesk</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="brand">
+                <div class="brand-icon">S</div>
+                <span>SupportDesk</span>
+            </div>
+
+            <nav class="navigation">
+
+                <div class="nav-section">
+                    <p class="nav-label">Workspace</p>
+
+                    <a href="#" class="nav-item active">
+                        <span class="nav-icon">▦</span>
+                        <span>Dashboard</span>
+                    </a>
+
+                    <a href="#" class="nav-item">
+                        <span class="nav-icon">□</span>
+                        <span>Tickets</span>
+                    </a>
+
+                    <a href="#" class="nav-item">
+                        <span class="nav-icon">♙</span>
+                        <span>Customers</span>
+                    </a>
+
+                    <a href="#" class="nav-item">
+                        <span class="nav-icon">◔</span>
+                        <span>Reports</span>
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <p class="nav-label">System</p>
+
+                    <a href="#" class="nav-item">
+                        <span class="nav-icon">⚙</span>
+                        <span>Settings</span>
+                    </a>
+                </div>
+
+            </nav>
+
+            <div class="sidebar-user">
+                <div class="user-avatar">LF</div>
+
+                <div class="user-details">
+                    <strong>Lee Forde</strong>
+                    <span>Administrator</span>
+                </div>
+
+                <span class="user-menu">•••</span>
+            </div>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Top Bar -->
+            <header class="topbar">
+
+                <div class="breadcrumb">
+                    <span>Workspace</span>
+                    <span class="breadcrumb-separator">/</span>
+                    <strong>Dashboard</strong>
+                </div>
+
+                <div class="topbar-actions">
+
+                    <button class="icon-button" aria-label="Notifications">
+                        ♢
+                        <span class="notification-dot"></span>
+                    </button>
+
+                    <div class="topbar-divider"></div>
+
+                    <div class="topbar-user">
+                        <div class="user-avatar small">LF</div>
+                        <span>Lee Forde</span>
+                        <span class="chevron">⌄</span>
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- Dashboard -->
+            <section class="dashboard">
+
+                <div class="page-heading">
+
+                    <div>
+                        <p class="eyebrow">Overview</p>
+
+                        <h1>Good morning, Lee</h1>
+
+                        <p class="page-description">
+                            Here's what's happening with your support workspace.
+                        </p>
+                    </div>
+
+                    <button class="primary-button">
+                        + New Ticket
+                    </button>
+
+                </div>
+
+
+                <!-- Statistics -->
+                <div class="stats-grid">
+
+                    <div class="stat-card">
+
+                        <div class="stat-card-header">
+                            <span>Open Tickets</span>
+                            <span class="stat-icon">□</span>
+                        </div>
+
+                        <strong class="stat-number">0</strong>
+
+                        <span class="stat-change positive">
+                            ↑ 0% <span>from last week</span>
+                        </span>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-card-header">
+                            <span>In Progress</span>
+                            <span class="stat-icon">◔</span>
+                        </div>
+
+                        <strong class="stat-number">0</strong>
+
+                        <span class="stat-change neutral">
+                            0 <span>due today</span>
+                        </span>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-card-header">
+                            <span>Resolved</span>
+                            <span class="stat-icon">✓</span>
+                        </div>
+
+                        <strong class="stat-number">0</strong>
+
+                        <span class="stat-change positive">
+                            ↑ 0% <span>from last week</span>
+                        </span>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-card-header">
+                            <span>Critical Issues</span>
+                            <span class="stat-icon critical">!</span>
+                        </div>
+
+                        <strong class="stat-number">0</strong>
+
+                        <span class="stat-change negative">
+                            ↑ 0 <span>from yesterday</span>
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Recent Tickets -->
+                <div class="section-header">
+
+                    <div>
+                        <h2>Recent Tickets</h2>
+
+                        <p>
+                            Latest activity across your support workspace.
+                        </p>
+                    </div>
+
+                    <button class="secondary-button">
+                        View all tickets →
+                    </button>
+
+                </div>
+
+
+                <div class="ticket-table-container">
+
+                    <table class="ticket-table">
+
+                        <thead>
+
+                            <tr>
+                                <th>Ticket</th>
+                                <th>Customer</th>
+                                <th>Issue</th>
+                                <th>Priority</th>
+                                <th>Status</th>
+                                <th>Updated</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+                            <!-- Tickets are rendered by JavaScript -->
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- New Ticket Modal -->
+            <div class="modal-overlay" id="ticketModal">
+
+                <div class="ticket-modal">
+
+                    <div class="modal-header">
+
+                        <div>
+
+                            <p class="eyebrow">
+                                Support
+                            </p>
+
+                            <h2>
+                                Create New Ticket
+                            </h2>
+
+                            <p class="modal-description">
+                                Create a new support ticket and assign its priority.
+                            </p>
+
+                        </div>
+
+                        <button
+                            class="modal-close"
+                            id="closeModal"
+                            aria-label="Close"
+                        >
+                            ×
+                        </button>
+
+                    </div>
+
+
+                    <form id="ticketForm">
+
+                        <div class="form-group">
+
+                            <label for="customer">
+                                Customer
+                            </label>
+
+                            <input
+                                type="text"
+                                id="customer"
+                                name="customer"
+                                placeholder="e.g. Acme Ltd"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="title">
+                                Issue Title
+                            </label>
+
+                            <input
+                                type="text"
+                                id="title"
+                                name="title"
+                                placeholder="e.g. Unable to sign in"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="description">
+                                Description
+                            </label>
+
+                            <textarea
+                                id="description"
+                                name="description"
+                                placeholder="Describe the customer's issue..."
+                                rows="4"
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label for="category">
+                                    Category
+                                </label>
+
+                                <select
+                                    id="category"
+                                    name="category"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select category
+                                    </option>
+
+                                    <option value="Authentication">
+                                        Authentication
+                                    </option>
+
+                                    <option value="Billing">
+                                        Billing
+                                    </option>
+
+                                    <option value="Integrations">
+                                        Integrations
+                                    </option>
+
+                                    <option value="Account">
+                                        Account
+                                    </option>
+
+                                    <option value="Technical">
+                                        Technical
+                                    </option>
+
+                                    <option value="Other">
+                                        Other
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="priority">
+                                    Priority
+                                </label>
+
+                                <select
+                                    id="priority"
+                                    name="priority"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select priority
+                                    </option>
+
+                                    <option value="Low">
+                                        Low
+                                    </option>
+
+                                    <option value="Medium">
+                                        Medium
+                                    </option>
+
+                                    <option value="High">
+                                        High
+                                    </option>
+
+                                    <option value="Critical">
+                                        Critical
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="modal-actions">
+
+                            <button
+                                type="button"
+                                class="secondary-modal-button"
+                                id="cancelModal"
+                            >
+                                Cancel
+                            </button>
+
+                            <button
+                                type="submit"
+                                class="primary-button"
+                            >
+                                Create Ticket
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>
